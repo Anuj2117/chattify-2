@@ -29,7 +29,7 @@ function Signup() {
     };
      console.log(userInfo);
     await axios
-      .post("/api/user/signup", userInfo)
+      .post("https://chattify-2-git-main-anuj-kushwahas-projects-db7b729e.vercel.app/api/user/signup", userInfo)
       .then((response) => {
         if (response.data) {
           toast.success("Signup successful");
