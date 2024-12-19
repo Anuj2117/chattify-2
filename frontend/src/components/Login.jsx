@@ -21,7 +21,7 @@ function Login() {
     };
 
     axios
-      .post("/api/user/login", userInfo)
+      .post("https://chattify-2.onrender.com/api/user/login", userInfo)
       .then((response) => {
         if (response.data) {
           toast.success("Login successful");
