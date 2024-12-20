@@ -11,17 +11,18 @@ import { app, server } from "./socketIo/server.js";
 dotenv.config();
 
 // middleware
+app.use(
+  cors({
+    origin:
+      "https://chattify-2-git-main-anuj-kushwahas-projects-db7b729e.vercel.app",
+    credentials: true,
+    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
+    allowedHeaders: ["content-Type", "Authorization"],
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-    cors({
-      origin:
-        "https://chattify-2-git-main-anuj-kushwahas-projects-db7b729e.vercel.app",
-      credentials: true,
-      methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
-      allowedHeaders: ["content-Type", "Authorization"],
-    })
-  );
+
 
 const PORT = process.env.PORT || 3001;
 const URI = process.env.MONGODB_URI;
