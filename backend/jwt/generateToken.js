@@ -10,4 +10,6 @@ const createTokenAndSaveCookie = (userId, res) => {
     sameSite: "none", // csrf
   });
 };
+console.log('Cookie:', req.cookies.jwt);
+
 export default createTokenAndSaveCookie;

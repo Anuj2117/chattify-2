@@ -4,12 +4,12 @@ import axios from "axios";
 function useGetAllUsers() {
   const [allUsers, setAllUsers] = useState([]);
   const [loading, setLoading] = useState(false);
+  
   useEffect(() => {
     const getUsers = async () => {
       setLoading(true);
       try {
         const token = Cookies.get("jwt");
-        console.log(token)
         const response = await axios.get("https://chattify-2.onrender.com/api/user/allusers", {
           //credentials: "include",
           withCredentials:true,
