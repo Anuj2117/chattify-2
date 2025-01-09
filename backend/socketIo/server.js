@@ -7,12 +7,11 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://chattify-2-git-main-anuj-kushwahas-projects-db7b729e.vercel.app",
+    origin: "http://localhost:5173",
     methods: ["GET", "POST"],
   },
 });
 
-// realtime message code goes here
 export const getReceiverSocketId = (receiverId) => {
   return users[receiverId];
 };

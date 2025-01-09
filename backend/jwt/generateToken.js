@@ -11,7 +11,7 @@ const createTokenAndSaveCookie = (userId, res) => {
 
   res.cookie("jwt", token, {
     httpOnly: true, // xss
-    secure: process.env.NODE_ENV === "production",
+    secure: true,
     sameSite: "none", // csrf
   });
   console.log("Set Cookie:", res.cookie);

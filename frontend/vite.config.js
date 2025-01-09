@@ -8,7 +8,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       "/api": {
-        target: "https://chattify-2.onrender.com",
+        target: "http://localhost:6969",
         changeOrigin: true,
       },
     },

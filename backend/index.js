@@ -14,7 +14,7 @@ dotenv.config();
 app.use(
   cors({
     origin:
-      "https://chattify-2-git-main-anuj-kushwahas-projects-db7b729e.vercel.app",
+      "http://localhost:5173",
     credentials: true,
     methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
     allowedHeaders: ["content-Type", "Authorization"],
